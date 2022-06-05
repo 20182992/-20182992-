@@ -139,20 +139,30 @@ jobs 명령어 (jobs [옵션] [번호] )
 jobs 명령어는 작업의 상태를 표시하는 명령어다. 현재 쉘 세션에서 실행시킨 백그라운드 작업의 목록이 출력되며, 각 작업에는 번호가 붙어 있어 kill 명령어 뒤에 '%번호' 등으로 사용할 수 있다.
 
 -l  : 프로세스 그룹 ID를 state 필드 앞에 출력
+
 -n : 프로세스 그룹 중에 대표 프로세스 ID를 출력
+
 -p : 각 프로세스 ID에 대해 한 행씩 출력
+
 command : 지정한 명령어를 실행
 
 
 jobs로 출력되는 백그라운드 작업의 상태값
 
 Running : 작업이 계속 진항중임
+
 Done : 작업이 완료되어 0을 반환
+
 Done(code) : 작업이 종료되었으며 0이 아닌 코드를 반환
+
 Stopped : 작업이 일시 중단
+
 Stopped(SIGTSTP)  :  SIGTSTP 시그널이 작업을 일시 중단
+
 Stopped(SIGSTOP)  : SIGSTOP 시그널이 작업을 일시 중단
+
 Stopped(SIGTTIN)  :  SIGTTIN  시그널이 작업을 일시 중단
+
 Stopped(SIGTTOU) :  SIGTTOU 시그널이 작업을 일시 중단
 
 
@@ -172,13 +182,21 @@ killall : 프로세스의 이름을 이용해 해당 프로세스를 종료시�
 
 시그널/ 시그널번호
 1 SIGHUP(HUP) : hang up의 약자로 프로세스를 재시작시키는 시그널이다. 
+
 2 SIGINT(INT) : 인터럽트. 실행을 중지시킨다. [CTRL] + [C] 를 눌렀을 때 보내지는 시그널 이다.
+
 3 SIGQUIT(QUIT) : 키보드 종료 [CTRL] + [\]
+
 4) SIGILL : 잘못된 명령5) SIGTRAP : 트랩 추적
+5) 
 9 SIGKILL(KILL) : 무조건 종료, 즉 강제 종료시키는 시그널 이다.
+
 15 SIGTERM(TERM) : Terminate의 약자로 가능한 정상 종료시키는 시그널로 kill 명령의 기본
+
 18 CONT : Continue. STOP등에 의해 정지된 프로세스를 다시 실행한다.
+
 19 STOP : 무조건적, 즉각적 정지한다.
+
 20 TSTP : 실행 정지후 다시 실행을 계속하기 위하여 대기시키는 시그널 [CTRL] +[Z] 를 눌렀을 때 보내지는 시그널 이다.
 
 
